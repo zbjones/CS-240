@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme"
+        android:title="@string/settings"
+        app:popupTheme="@style/AppTheme" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/Filler"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/lifeStoryLinesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lifeStoryLinesTexts"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lifeStoryLines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/life_story_lines"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/lifeStoryLinesSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/show_life_story_lines"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/lifeStoryLinesSwitch"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lifeStoryLinesDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:id="@+id/familyTreeLinesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/familyTreeLinesTexts"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/familyTreeLines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/family_tree_lines"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/familyTreeLinesSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/show_family_tree_lines"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/familyTreeLinesSwitch"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/familyTreeLinesDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:id="@+id/spouseLinesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/spouseLinesTexts"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/spouseLines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/spouse_lines"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/spouseLinesSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/show_spouse_lines"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/spouseLinesSwitch"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/spouseLinesDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:id="@+id/fathersSide"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/fathersSideTexts"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fathersSideTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/fathers_side"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/fathersSideSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/show_fathers_side"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/fathersSideSwitch"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/fathersSideDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:id="@+id/mothersSide"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/mothersSideTitle"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mothersSideTexts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/mothers_side"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/mothersSideSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/filter_mothers_side"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/mothersSideSwitch"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/mothersSideDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:id="@+id/femaleEvents"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/femaleEventsTitle"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/maleEventsTexts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/male_events"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/maleEventsSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/filter_by_male_events"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/maleEventsSwitch"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/maleEventsDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:id="@+id/maleEvents"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/maleEventsTitle"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/femaleEventsTexts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/female_events"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/femaleEventSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/filter_by_female_events"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/femaleEventSwitch"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/femaleEventDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:id="@+id/logoutLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/logoutTexts"
+                android:layout_width="360dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:text="@string/logout"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/logoutSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/tap_to_return_to_login_screen"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/logoutDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+    </LinearLayout>
+
+</FrameLayout>
